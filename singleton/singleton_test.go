@@ -10,16 +10,24 @@ import (
 
 func BenchmarkEager(b *testing.B){
 	for i := 0; i < b.N; i++ {
-		if e := GetInstanceEager(); e == nil {
-			b.Fatalf("No instance returned", e)
+		if s := GetInstanceEager(); s == nil {
+			b.Fatalf("singleton_test::BenchmarkEager - No instance returned, %s", s)
 		}
 	}
 }
 
 func BenchmarkLazy(b *testing.B){
 	for i := 0; i < b.N; i++ {
-		if e := GetInstanceLazy(); e == nil {
-			b.Fatalf("No instance returned", e)
+		if s := GetInstanceLazy(); s == nil {
+			b.Fatalf("singleton_test::BenchmarkLazy - No instance returned, %s", s)
+		}
+	}
+}
+
+func BenchmarkThreadSafe(b *testing.B){
+	for i := 0; i < b.N; i++ {
+		if s := GetInstanceThreadSafe(); s == nil {
+			b.Fatalf("singleton_test::BenchmarkThreadSafe - No instance returned, %s", s)
 		}
 	}
 }

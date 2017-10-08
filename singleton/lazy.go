@@ -10,6 +10,7 @@ var (
 	lazyInstance *singleton
 )
 
+//GetInstanceLazy - get singleton instance initialized on call
 func GetInstanceLazy() *singleton{
 	if lazyInstance == nil{
 		lazyInstance = &singleton{t: time.Now()}

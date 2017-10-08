@@ -16,6 +16,7 @@ func init(){
 	eagerInstance = &singleton{t: time.Now()}
 }
 
+//GetInstanceEager - get singleton instance pre-initialized
 func GetInstanceEager() *singleton{
 	return eagerInstance
 }
