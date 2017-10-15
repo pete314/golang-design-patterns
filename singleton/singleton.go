@@ -1,7 +1,7 @@
 // Author: Peter Nagy <https://peternagy.ie>
 // Since: Oct, 2017
 // Package: singleton
-// Description: holds interface
+// Description: holds interface and function implementation
 package singleton
 
 import "time"
