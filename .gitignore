@@ -17,3 +17,6 @@
 
 # Sensitive or high-churn files:
 .idea
+
+# vsCode ignore
+.vscode/* 
